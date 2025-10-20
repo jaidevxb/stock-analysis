@@ -8,8 +8,8 @@
   {
     "id": 2,
     "question": "List all days where the closing price was higher than the opening price.",
-    "output": "704",
-    "sql": "SELECT COUNT(*) as days_count\n    FROM stocks\n    WHERE Stock = '20MICRONS'\n    AND Close > Open"
+    "output": "Date: 2013-01-08, Open: 74.97, Close: 75.28\nDate: 2013-01-15, Open: 74.4, Close: 76.05\nDate: 2013-01-16, Open: 72.78, Close: 75.17\nDate: 2013-01-18, Open: 75.5, Close: 76.08\nDate: 2013-01-23, Open: 75.47, Close: 78.1\n... (704 total days)",
+    "sql": "SELECT Date, Open, Close\n    FROM stocks\n    WHERE Stock = '20MICRONS'\n    AND Close > Open\n    ORDER BY Date"
   },
   {
     "id": 3,
